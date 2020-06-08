@@ -1,7 +1,7 @@
 let http = require('http'),
     httpProxy = require('http-proxy');
 
-httpProxy.createRightProxy(8124, 'localhost').listen(8000);
+httpProxy.createServer(8124, 'localhost').listen(8000);
 
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
